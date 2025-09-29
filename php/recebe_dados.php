@@ -7,8 +7,8 @@ $conexao->set_charset("utf8");
 $conexao->query("SET time_zone='-3:00'");
 
 // ===== 1. Busca dados no ThingSpeak =====
-$channelID = "3073198";
-$readAPIKey = "5VWJU7MLPJND89Q9";
+$channelID = "";
+$readAPIKey = "";
 $thingspeakURL = "https://api.thingspeak.com/channels/$channelID/feeds.json?api_key=$readAPIKey&results=1";
 
 $dadosJSON = file_get_contents($thingspeakURL);
