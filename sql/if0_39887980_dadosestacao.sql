@@ -2,7 +2,7 @@
 -- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: sql113.infinityfree.com
+-- Host: 
 -- Tempo de geração: 28/09/2025 às 21:42
 -- Versão do servidor: 11.4.7-MariaDB
 -- Versão do PHP: 7.2.22
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `if0_39887980_dadosestacao`
+-- Banco de dados: ``
 --
 
 -- --------------------------------------------------------
