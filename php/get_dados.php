@@ -18,10 +18,10 @@ $conexao->query("SET time_zone='-3:00'");
 // ============================
 
 // ID do canal no ThingSpeak
-$channelID = "3073198";
+$channelID = "";
 
 // Chave de leitura (Read API Key) para acessar os dados do canal
-$readAPIKey = "5VWJU7MLPJND89Q9";
+$readAPIKey = "";
 
 // URL da API do ThingSpeak para buscar os dados mais recentes
 $thingspeakURL = "https://api.thingspeak.com/channels/$channelID/feeds.json?api_key=$readAPIKey&results=1";
