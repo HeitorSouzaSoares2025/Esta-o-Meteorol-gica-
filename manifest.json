@@ -1,0 +1,36 @@
+{
+  // Nome completo do aplicativo, aparece na tela inicial e em telas maiores
+  "name": "Estação Meteorológica",
+
+  // Nome curto usado em locais com pouco espaço, como o ícone do PWA
+  "short_name": "Estação",
+
+  // URL que será carregada quando o app for aberto pelo atalho (ponto de entrada)
+  "start_url": "./index.html",
+
+  // Modo de exibição do PWA
+  // "standalone" faz o app abrir sem a barra do navegador, parecendo um app nativo
+  "display": "standalone",
+
+  // Cor de fundo exibida na tela de splash quando o app está abrindo
+  "background_color": "#ffffff",
+
+  // Cor do tema usada pelo sistema operacional (barra superior, abas, etc.)
+  "theme_color": "#4a90e2",
+
+  // Ícones do PWA usados em atalhos, splash screen e tela inicial
+  "icons": [
+    {
+      // Caminho do ícone de 192x192 pixels (usado em atalhos e splash de alguns dispositivos)
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      // Caminho do ícone de 512x512 pixels (recomendado para instalação do PWA)
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

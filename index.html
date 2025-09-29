@@ -1,0 +1,80 @@
+<!DOCTYPE html> <!-- Declara que o documento segue o padrão HTML5 -->
+<html lang="pt-BR"> <!-- Define a linguagem da página como português do Brasil -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Define o padrão de codificação de caracteres (UTF-8) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Garante que a página será responsiva, ajustando a largura à tela do dispositivo -->
+
+    <title>Estação Meteorológica</title> <!-- Título exibido na aba do navegador -->
+
+    <!-- PWA (Progressive Web App) -->
+    <link rel="manifest" href="/manifest.json">
+    <!-- Define o arquivo manifest.json, necessário para instalar o site como app -->
+
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+    <!-- Ícone padrão que aparece na aba do navegador ou atalho -->
+
+    <link rel="apple-touch-icon" href="icons/icon-512.png">
+    <!-- Ícone usado para dispositivos iOS (quando o app é salvo na tela inicial) -->
+
+    <meta name="theme-color" content="#4a90e2">
+    <!-- Define a cor do tema do navegador e da barra de status no PWA -->
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <!-- Biblioteca para gerar gráficos dinâmicos -->
+
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Arquivo CSS com os estilos da página -->
+</head>
+
+<body>
+    <!-- Cabeçalho principal -->
+    <h1>🌤️ Estação Meteorológica</h1>
+
+    <!-- CARD do Histórico -->
+    <div id="historico" class="card">
+        <!-- Input para selecionar data e hora -->
+        <input type="datetime-local" id="dataHoraInput">
+
+        <!-- Botão que aciona a função JS de busca -->
+        <button onclick="consultarHistorico()">Buscar</button>
+
+        <!-- Área onde os resultados do histórico serão exibidos -->
+        <div id="resultado"></div>
+    </div>
+
+    <!-- CARD da Temperatura -->
+    <div class="card">
+        <h2>🌡️ Temperatura</h2>
+        <!-- Valor atual da temperatura -->
+        <div class="valor-atual" id="temp-atual">--</div>
+        <!-- Gráfico da temperatura -->
+        <canvas id="graficoTemp"></canvas>
+    </div>
+
+    <!-- CARD da Umidade -->
+    <div class="card">
+        <h2>💧 Umidade</h2>
+        <!-- Valor atual da umidade -->
+        <div class="valor-atual" id="umid-atual">--</div>
+        <!-- Gráfico da umidade -->
+        <canvas id="graficoUmid"></canvas>
+    </div>
+
+    <!-- CARD da Luminosidade -->
+    <div class="card">
+        <h2>☀️ Luminosidade</h2>
+        <!-- Valor atual da luminosidade -->
+        <div class="valor-atual" id="lum-atual">Média</div>
+        <!-- Gráfico da luminosidade -->
+        <canvas id="graficoLum"></canvas>
+    </div>
+
+    <!-- JS externo -->
+    <script src="js/script.js"></script>
+    <!-- Arquivo JavaScript que controla a lógica da página -->
+</body>
+</html>

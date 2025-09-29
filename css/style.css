@@ -1,0 +1,115 @@
+/* ======== BASE ======== */
+body {
+    font-family: 'Inter', sans-serif;           /* Define a fonte padrão da página */
+    text-align: center;                         /* Centraliza todo o conteúdo do body */
+    background: radial-gradient(circle at center, #1f1c2c 0%, #928dab 100%);
+    /* Fundo com gradiente radial do centro para as bordas, do roxo escuro (#1f1c2c) ao lilás (#928dab) */
+
+    color: #fff;                                 /* Define a cor padrão do texto como branco */
+    transition: background 1s ease-in-out, color 0.5s;
+    /* Suaviza a transição de cores do fundo e do texto quando alteradas */
+
+    margin: 0;                                   /* Remove margens padrão do navegador */
+    padding: 0;                                  /* Remove preenchimento padrão do navegador */
+    min-height: 100vh;                           /* Garante que o body ocupe ao menos a altura da tela */
+}
+
+/* ======== TÍTULOS ======== */
+h1 {
+    margin-top: 20px;                            /* Espaço superior */
+    margin-bottom: 30px;                         /* Espaço inferior */
+    font-size: 1.8em;                             /* Tamanho do texto */
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+    /* Sombra suave para destacar o texto no fundo */
+}
+
+/* ======== CARDS ======== */
+.card {
+    background: rgba(255, 255, 255, 0.08);       /* Fundo semitransparente */
+    backdrop-filter: blur(10px);                 /* Efeito de desfoque do fundo (glassmorphism) */
+    border-radius: 20px;                          /* Bordas arredondadas */
+    margin: 20px auto;                             /* Espaçamento e centralização horizontal */
+    padding: 25px;                                 /* Espaçamento interno */
+    max-width: 500px;                              /* Largura máxima do card */
+    width: 90%;                                    /* Ajusta para telas menores */
+    box-sizing: border-box;                        /* Inclui padding/borda no cálculo da largura */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);     /* Sombra para dar profundidade */
+    transition: background 0.5s ease, transform 0.3s ease;
+    /* Suaviza alterações de fundo e efeitos de movimento */
+}
+
+.card:hover {
+    transform: translateY(-4px);                  /* Eleva o card levemente ao passar o mouse */
+    background: rgba(255, 255, 255, 0.12);        /* Clareia o fundo no hover */
+}
+
+/* ======== CANVAS (Gráficos) ======== */
+canvas {
+    background: rgba(255, 255, 255, 0.05);        /* Fundo sutil para destacar o gráfico */
+    border-radius: 15px;                          /* Bordas arredondadas */
+    padding: 15px;                                 /* Espaçamento interno */
+    max-width: 100%;                               /* Garante que se adapte a telas menores */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);    /* Sombra para profundidade */
+}
+
+/* ======== VALORES ATUAIS ======== */
+.valor-atual {
+    font-size: 1.8em;                              /* Tamanho do valor */
+    margin-bottom: 15px;                           /* Espaço inferior */
+    font-weight: bold;                             /* Texto em negrito */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);    /* Sombra para dar contraste */
+}
+
+/* ======== INPUT E BOTÃO DO HISTÓRICO ======== */
+#historico input {
+    padding: 12px;                                  /* Espaçamento interno */
+    width: 65%;                                     /* Largura do input */
+    border-radius: 10px;                            /* Bordas arredondadas */
+    border: none;                                   /* Remove borda padrão */
+    margin-right: 5px;                              /* Espaço à direita do botão */
+    box-sizing: border-box;                         /* Inclui padding no cálculo da largura */
+    outline: none;                                  /* Remove contorno padrão */
+    background: rgba(255, 255, 255, 0.15);          /* Fundo levemente transparente */
+    color: #fff;                                    /* Texto branco */
+}
+
+#historico input::placeholder {
+    color: rgba(255,255,255,0.7);                   /* Cor do texto do placeholder */
+}
+
+#historico button {
+    padding: 12px 20px;                              /* Tamanho do botão */
+    border-radius: 10px;                              /* Bordas arredondadas */
+    border: none;                                     /* Remove borda padrão */
+    background: linear-gradient(90deg, #0072ff, #00c6ff);
+    /* Degradê azul claro */
+    color: #fff;                                      /* Texto branco */
+    cursor: pointer;                                  /* Cursor de clique */
+    font-weight: bold;                                /* Texto em negrito */
+    transition: 0.3s ease;                            /* Animação suave */
+}
+
+#historico button:hover {
+    transform: translateY(-2px);                      /* Efeito de leve elevação */
+    box-shadow: 0 4px 15px rgba(0, 198, 255, 0.5);     /* Sombra luminosa */
+}
+
+/* ======== RESULTADO ======== */
+#resultado {
+    margin-top: 10px;                                 /* Espaço superior */
+    font-weight: bold;                                 /* Texto em negrito */
+    word-wrap: break-word;                             /* Quebra palavras grandes para evitar overflow */
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width:400px) {
+    h1 { font-size: 1.6em; }                          /* Reduz tamanho do título em telas pequenas */
+    #historico input { width: 58%; padding: 8px; }    /* Ajusta largura e padding do input */
+    #historico button { padding: 8px; font-size: 0.9em; } /* Botão mais compacto */
+    .valor-atual { font-size: 1.5em; }                /* Reduz valor exibido */
+}
+
+/* ======== TRANSIÇÕES GERAIS ======== */
+body, .card, h1, .valor-atual, #resultado {
+    transition: all 0.8s ease;                        /* Suaviza mudanças gerais de cores/estilos */
+}
