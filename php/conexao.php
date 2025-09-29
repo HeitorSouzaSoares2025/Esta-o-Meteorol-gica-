@@ -2,16 +2,16 @@
 // ======== CONFIGURAÇÕES DO BANCO DE DADOS ========
 
 // Nome do host do servidor MySQL (no caso, do InfinityFree)
-$host = "sql113.infinityfree.com";
+$host = "";
 
 // Usuário do banco de dados (fornecido pelo InfinityFree)
-$usuario = "if0_39887980";
+$usuario = "";
 
 // Senha do banco de dados
-$senha = "NnHbZmfhqW";
+$senha = "";
 
 // Nome do banco de dados onde os dados da estação estão armazenados
-$banco = "if0_39887980_dadosestacao";
+$banco = "";
 
 
 // ======== CONEXÃO COM O BANCO ========
