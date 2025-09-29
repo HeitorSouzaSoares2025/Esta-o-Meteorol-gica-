@@ -26,7 +26,7 @@ if($result && $dado = $result->fetch_assoc()){
     $mensagem .= "Data/Hora: ".$dado['data_hora']."\n";
 
     // Define o endereço de destino do e-mail
-    $destino = "heitorinformaticasala09@gmail.com";
+    $destino = "";
 
     // Define o assunto do e-mail
     $assunto = "Relatório Estação Meteorológica";
